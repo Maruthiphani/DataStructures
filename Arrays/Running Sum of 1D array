@@ -1,0 +1,15 @@
+class Solution {
+    public int[] runningSum(int[] nums) {
+        
+        if(nums==null) return null;
+        
+        int aL= nums.length;
+        
+        int[] sum= new int[aL];
+        sum[0]=nums[0];
+        for(int i=1; i<aL; i++){
+            sum[i]= sum[i-1]+ nums[i];
+        }
+        return sum;
+    }
+}
