@@ -24,9 +24,10 @@ class Solution {
         StringBuilder hex = new StringBuilder();
         char[] digits = "0123456789abcdef".toCharArray();
 
-        while (num != 0) {
-            hex.insert(0, digits[num & 0xf]); // Mask with 0xf to get the last 4 bits
-            num >>>= 4; // Right-shift by 4 bits
+       while (num > 0) {
+            int remainder = num % 16;
+            hexString.insert(0, hexDigits[remainder]);
+            num = num / 16;
         }
 
         return hex.toString();
