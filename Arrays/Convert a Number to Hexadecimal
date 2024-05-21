@@ -21,8 +21,8 @@ class Solution {
             return "0";
         }
 
-        StringBuilder hex = new StringBuilder();
-        char[] digits = "0123456789abcdef".toCharArray();
+        StringBuilder hexString = new StringBuilder();
+        char[] hexDigits = "0123456789abcdef".toCharArray();
 
        while (num > 0) {
             int remainder = num % 16;
